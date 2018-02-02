@@ -238,8 +238,7 @@ var PhotoSwipeUI_Default =
 									.replace('{{text}}', encodeURIComponent(share_text) );
 
 				shareButtonOut += '<a href="' + shareURL + '" target="_blank" '+
-									'class="pswp__share--' + shareButtonData.id + '"' +
-									(shareButtonData.download ? 'download' : '') + '>' + 
+									'class="pswp__share--' + shareButtonData.id + '"' +  '>' + 
 									shareButtonData.label + '</a>';
 
 				if(_options.parseShareButtonOut) {
