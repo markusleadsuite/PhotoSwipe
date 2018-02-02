@@ -250,8 +250,6 @@ var PhotoSwipeUI_Default =
 				}
 			}
 			_shareModal.children[0].innerHTML = shareButtonOut;
-			_shareModal.children[0].onclick = _openWindowPopup;
-
 		},
 		_hasCloseClass = function(target) {
 			for(var  i = 0; i < _options.closeElClasses.length; i++) {
