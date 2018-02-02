@@ -45,9 +45,6 @@
 	box-shadow: none;
 
 	&:focus,
-	&:hover {
-		opacity: 1;
-	}
 	
 	&:active {
 		outline: none;
@@ -229,10 +226,7 @@
 		font-size: 14px;
 		line-height: 18px;
 
-		&:hover {
-			text-decoration: none;
-			color: #000;
-		}
+
 
 		
 		&:first-child {
@@ -275,34 +269,6 @@ a.pswp__share--facebook {
 		pointer-events: none;
 	}
 
-	&:hover {
-		background: #3E5C9A;
-		color: #FFF;
-
-		&:before {
-			border-bottom-color: #3E5C9A;
-		}
-	}
-}
-
-a.pswp__share--twitter {
-	&:hover {
-		background: #55ACEE;
-		color: #FFF;
-	}
-}
-
-a.pswp__share--pinterest {
-	&:hover {
-		background: #CCC;
-		color: #CE272D;
-	}
-}
-
-a.pswp__share--download {
-	&:hover {
-		background: #DDD;
-	}
 }
 
 
