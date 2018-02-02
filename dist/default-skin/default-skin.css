@@ -35,9 +35,7 @@
           transition: opacity 0.2s;
   -webkit-box-shadow: none;
           box-shadow: none; }
-  .pswp__button:focus, .pswp__button:hover {
-    opacity: 1; }
-  .pswp__button:active {
+  .pswp__button:focus, .pswp__button:active {
     outline: none;
     opacity: 0.9; }
   .pswp__button::-moz-focus-inner {
@@ -188,9 +186,6 @@
     text-decoration: none;
     font-size: 14px;
     line-height: 18px; }
-    .pswp__share-tooltip a:hover {
-      text-decoration: none;
-      color: #000; }
     .pswp__share-tooltip a:first-child {
       /* round corners on the first/last list item */
       border-radius: 2px 2px 0 0; }
@@ -221,23 +216,6 @@ a.pswp__share--facebook:before {
   -webkit-pointer-events: none;
   -moz-pointer-events: none;
   pointer-events: none; }
-
-a.pswp__share--facebook:hover {
-  background: #3E5C9A;
-  color: #FFF; }
-  a.pswp__share--facebook:hover:before {
-    border-bottom-color: #3E5C9A; }
-
-a.pswp__share--twitter:hover {
-  background: #55ACEE;
-  color: #FFF; }
-
-a.pswp__share--pinterest:hover {
-  background: #CCC;
-  color: #CE272D; }
-
-a.pswp__share--download:hover {
-  background: #DDD; }
 
 /*
 
