@@ -1,6 +1,6 @@
-/*! PhotoSwipe Default UI - 4.1.2 - 2017-04-05
+/*! PhotoSwipe Default UI - 4.1.2 - 2018-02-02
 * http://photoswipe.com
-* Copyright (c) 2017 Dmitry Semenov; */
+* Copyright (c) 2018 Dmitry Semenov; */
 /**
 *
 * UI on top of main sliding area (caption, arrows, close button, etc.).
@@ -241,8 +241,7 @@ var PhotoSwipeUI_Default =
 									.replace('{{text}}', encodeURIComponent(share_text) );
 
 				shareButtonOut += '<a href="' + shareURL + '" target="_blank" '+
-									'class="pswp__share--' + shareButtonData.id + '"' +
-									(shareButtonData.download ? 'download' : '') + '>' + 
+									'class="pswp__share--' + shareButtonData.id + '"' +  '>' + 
 									shareButtonData.label + '</a>';
 
 				if(_options.parseShareButtonOut) {
@@ -250,6 +249,8 @@ var PhotoSwipeUI_Default =
 				}
 			}
 			_shareModal.children[0].innerHTML = shareButtonOut;
+		
+
 		},
 		_hasCloseClass = function(target) {
 			for(var  i = 0; i < _options.closeElClasses.length; i++) {
