@@ -120,8 +120,6 @@ var PhotoSwipeUI_Default =
 				found,
 				customButtonClicked = clickedClass.indexOf("photoswipe-click-class") > -1;
 
-			console.log(target);
-
 			for(var i = 0; i < _uiElements.length; i++) {
 				uiElement = _uiElements[i];
 				if(uiElement.onTap && clickedClass.indexOf('pswp__' + uiElement.name ) > -1 ) {
@@ -431,6 +429,7 @@ var PhotoSwipeUI_Default =
 				_shareModal = el;
 			},
 			onTap: function() {
+				console.log(pswp.options);
 				_toggleShareModal();
 			}
 		},
