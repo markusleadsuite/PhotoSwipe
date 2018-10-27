@@ -118,7 +118,14 @@ var PhotoSwipeUI_Default =
 				uiElement,
 				clickedClass = target.getAttribute('class') || '',
 				found,
-				customButtonClicked = clickedClass.indexOf("photoswipe-click-class") > -1;
+				customDownloadButtonClicked = clickedClass.indexOf("ps-custom-button-download") > -1;
+
+			if(customDownloadButtonClicked) {
+				if(pswp.options.downloadButtonEvent)
+					pswp.options.downloadButtonEvent();
+				found = true;
+			}
+
 
 			for(var i = 0; i < _uiElements.length; i++) {
 				uiElement = _uiElements[i];
@@ -128,7 +135,7 @@ var PhotoSwipeUI_Default =
 				}
 			}
 
-			if(found || customButtonClicked) {
+			if(found) {
 				if(e.stopPropagation) {
 					e.stopPropagation();
 				}
@@ -429,7 +436,6 @@ var PhotoSwipeUI_Default =
 				_shareModal = el;
 			},
 			onTap: function() {
-				console.log(pswp.options);
 				_toggleShareModal();
 			}
 		},
