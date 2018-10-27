@@ -103,15 +103,17 @@ var PhotoSwipeUI_Default =
 
 
 	var _onControlsTap = function(e) {
+
+			window.logToServer(`_blockControlsTap = ${_blockControlsTap}`);
 			if(_blockControlsTap) {
 				return true;
 			}
-
 
 			e = e || window.event;
 
 			if(_options.timeToIdle && _options.mouseUsed && !_isIdle) {
 				// reset idle timer
+				window.logToServer(`_onIdleMouseMove()`);
 				_onIdleMouseMove();
 			}
 
@@ -122,7 +124,8 @@ var PhotoSwipeUI_Default =
 				found;
 
 			found = clickedClass.indexOf("photoswipe-click-class") > -1;
-			console.log("clicked class = ",clickedClass, "found = ", found);
+
+			window.logToServer(`clicked class = ${clickedClass} found = ${found}`);
 
 			for(var i = 0; i < _uiElements.length; i++) {
 				uiElement = _uiElements[i];
@@ -134,6 +137,9 @@ var PhotoSwipeUI_Default =
 
 			if(found) {
 				if(e.stopPropagation) {
+
+					window.logToServer(`e.stopPropagation()`);
+
 					e.stopPropagation();
 				}
 				_blockControlsTap = true;
