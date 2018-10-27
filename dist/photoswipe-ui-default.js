@@ -122,10 +122,9 @@ var PhotoSwipeUI_Default =
 
 			if(customDownloadButtonClicked) {
 				if(pswp.options.downloadButtonEvent)
-					pswp.options.downloadButtonEvent();
+					pswp.options.downloadButtonEvent(e);
 				found = true;
 			}
-
 
 			for(var i = 0; i < _uiElements.length; i++) {
 				uiElement = _uiElements[i];
@@ -137,6 +136,7 @@ var PhotoSwipeUI_Default =
 
 			if(found) {
 				if(e.stopPropagation) {
+					console.log("stop propagagaga");
 					e.stopPropagation();
 				}
 				_blockControlsTap = true;
