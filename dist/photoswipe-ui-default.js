@@ -136,7 +136,6 @@ var PhotoSwipeUI_Default =
 
 			if(found) {
 				if(e.stopPropagation) {
-					console.log("stop propagagaga");
 					e.stopPropagation();
 				}
 				_blockControlsTap = true;
