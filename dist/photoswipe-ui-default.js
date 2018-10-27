@@ -107,20 +107,20 @@ var PhotoSwipeUI_Default =
 				return true;
 			}
 
-			e = e || window.event;
-
 			if(_options.timeToIdle && _options.mouseUsed && !_isIdle) {
 				// reset idle timer
-				window.logToServer(`_onIdleMouseMove()`);
 				_onIdleMouseMove();
 			}
 
+			e = e || window.event;
 
 			var target = e.target || e.srcElement,
 				uiElement,
 				clickedClass = target.getAttribute('class') || '',
 				found,
 				customButtonClicked = clickedClass.indexOf("photoswipe-click-class") > -1;
+
+			console.log(target);
 
 			for(var i = 0; i < _uiElements.length; i++) {
 				uiElement = _uiElements[i];
