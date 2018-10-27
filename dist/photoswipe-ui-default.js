@@ -121,11 +121,10 @@ var PhotoSwipeUI_Default =
 			var target = e.target || e.srcElement,
 				uiElement,
 				clickedClass = target.getAttribute('class') || '',
-				found;
+				found,
+				customButtonClicked = clickedClass.indexOf("photoswipe-click-class") > -1;
 
-			found = clickedClass.indexOf("photoswipe-click-class") > -1;
-
-			window.logToServer(`clicked class = ${clickedClass} found = ${found}`);
+			window.logToServer(`clicked class = ${clickedClass} customButtonClicked = ${customButtonClicked}`);
 
 			for(var i = 0; i < _uiElements.length; i++) {
 				uiElement = _uiElements[i];
@@ -135,7 +134,7 @@ var PhotoSwipeUI_Default =
 				}
 			}
 
-			if(found) {
+			if(found && !customButtonClicked) {
 				if(e.stopPropagation) {
 
 					window.logToServer(`e.stopPropagation()`);
