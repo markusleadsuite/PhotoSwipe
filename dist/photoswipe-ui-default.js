@@ -118,7 +118,21 @@ var PhotoSwipeUI_Default =
 				uiElement,
 				clickedClass = target.getAttribute('class') || '',
 				found,
-				customDownloadButtonClicked = clickedClass.indexOf("ps-custom-button-download") > -1;
+				customDownloadButtonClicked = clickedClass.indexOf("ps-custom-button-download") > -1,
+				customLikeButtonClicked = clickedClass.indexOf("photoswipe-custom-button-like") > -1,
+				customCommentButtonClicked = clickedClass.indexOf("photoswipe-custom-button-comment") > -1;
+
+				if(customLikeButtonClicked){
+					if(pswp.options.likeButtonEvent)
+						pswp.options.likeButtonEvent(e);
+					found = true;
+				}
+
+				if(customCommentButtonClicked){
+					if(pswp.options.commentButtonEvent)
+						pswp.options.commentButtonEvent(e);
+					found = true;
+				}
 
 			if(customDownloadButtonClicked) {
 				if(pswp.options.downloadButtonEvent)
