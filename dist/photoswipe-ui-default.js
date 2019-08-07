@@ -120,7 +120,14 @@ var PhotoSwipeUI_Default =
 				found,
 				customDownloadButtonClicked = clickedClass.indexOf("ps-custom-button-download") > -1,
 				customLikeButtonClicked = clickedClass.indexOf("photoswipe-custom-button-like") > -1,
-				customCommentButtonClicked = clickedClass.indexOf("photoswipe-custom-button-comment") > -1;
+				customCommentButtonClicked = clickedClass.indexOf("photoswipe-custom-button-comment") > -1,
+				customShareButtonClicked = clickedClass.indexOf("photoswipe-custom-button-share") > -1;
+
+				if(customShareButtonClicked) {
+					if(pswp.options.shareButtonEvent)
+						pswp.options.shareButtonEvent(e);
+					found = true;
+				}
 
 				if(customLikeButtonClicked){
 					if(pswp.options.likeButtonEvent)
